@@ -75,3 +75,5 @@ class Livro:
         self.ano_publicacao = 0
         self.numero_paginas = 0
         self.genero = ''
+
+    def
