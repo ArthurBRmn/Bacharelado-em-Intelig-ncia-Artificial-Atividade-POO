@@ -71,9 +71,31 @@ class Livro:
     def __init__(self):
 
         self.titulo = ''
-        self.autor = ''
+        self.autor =''
         self.ano_publicacao = 0
-        self.numero_paginas = 0
+        self.numero_paginas = 170
         self.genero = ''
 
-    def
+        self.pagina_atual = 5
+
+    def abrir (self):
+        print('Livro aberto')
+
+    def fechar(self):
+        print('Livro fechado')
+
+    def marcar_pagina (self):
+        print('Você marcou a página:')
+
+    def avancar_pagina (self):
+        if self.pagina_atual < self.numero_paginas:
+            self.pagina_atual += 1
+
+    def retroceder_pagina (self):
+        if self.pagina_atual > 1:
+            self.pagina_atual -= 1
+            print('Você retrocedeu para a pagina:')
+            print(self.pagina_atual)
+
+livro1 = Livro()
+livro1.retroceder_pagina()
