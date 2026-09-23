@@ -2,24 +2,39 @@ class Funcionario:
 
     def __init__(self):
 
-        self.nome = ''
-        self.cargo = ''
-        self.salario = 1000
-        self.departamento = ''
+        self.__nome = ''
+        self.__cargo = ''
+        self.__salario = 1000
+        self.__departamento = ''
+
+    def get_nome(self):
+        return self.__nome
+
+    def set_nome(self, nome):
+        self.__nome = nome
+
+    def get_cargo(self):
+        return self.__cargo
+
+    def set_cargo(self, cargo):
+        self.__cargo = cargo
+
+    def get_salario(self):
+        return self.__salario
+
+    def set_salario(self, salario):
+        self.__salario = salario
+
+    def get_departamento(self):
+        return self.__departamento
+
+    def set_departamento(self, departamento):
+        self.__departamento = departamento
 
     def receber_aumento (self, porcentual):
-
-        self.salario *= 1 + porcentual/100
-        print(f'\nSalario com aumento : {porcentual} % = {self.salario} R$')
-        print()
+        self.__salario *= 1 + porcentual/100
 
     def mudar_departamento (self, novo_departamento):
-        self.departamento = novo_departamento
-        print(f'Funcionário {self.nome} e do {self.departamento} agora.')
-        print()
+        self.__departamento = novo_departamento
 
     def exibir_dados(self):
-        print(f'Nome: {self.nome} \nCargo: {self.cargo} '
-              f'\nSalario: {self.salario} \nDepartamento: {self.departamento}\n')
-
-print('_' * 50 + '\nAtividade 6. Funcionário\n' + '_' * 50)

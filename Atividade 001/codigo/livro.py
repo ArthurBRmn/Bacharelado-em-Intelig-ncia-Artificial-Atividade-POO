@@ -2,33 +2,57 @@ class Livro:
 
     def __init__(self):
 
-        self.titulo = ''
-        self.autor =''
-        self.ano_publicacao = 0
-        self.numero_paginas = 170
-        self.genero = ''
+        self.__titulo = ''
+        self.__autor =''
+        self.__ano_publicacao = 0
+        self.__numero_paginas = 170
+        self.__genero = ''
 
-        self.pagina_atual = 5
+        self.__pagina_atual = 5
+
+    def get_titulo(self):
+        return self.__titulo
+
+    def set_titulo(self, titulo):
+        self.__titulo = titulo
+
+    def get_autor(self):
+        return self.__autor
+
+    def set_autor(self, autor):
+        self.__autor = autor
+
+    def get_genero(self):
+        return self.__genero
+
+    def set_genero(self, genero):
+        self.__genero = genero
+
+    def get_numero_paginas(self):
+        return self.__numero_paginas
+    def set_numero_paginas(self, numero_paginas):
+        self.__numero_paginas = numero_paginas
+
+    def get_ano_publicacao(self):
+        return self.__ano_publicacao
+    def set_ano_publicacao(self, ano_publicacao):
+        self.__ano_publicacao = ano_publicacao
+
 
     def abrir (self):
-        print('Livro aberto\n')
+        print('test')
 
     def fechar (self):
-        print('Livro fechado\n')
+        print('test')
 
     def marcar_pagina (self,pagina):
-        if self.numero_paginas >= pagina:
-            self.pagina_atual = pagina
-            print(f'Você marcou a página: {self.pagina_atual}\n')
+        if self.__numero_paginas >= pagina:
+            self.__pagina_atual = pagina
 
     def avancar_pagina (self):
-        if self.pagina_atual < self.numero_paginas:
-            self.pagina_atual += 1
-            print(f'Você avançou para página: {self.pagina_atual}\n')
+        if self.__pagina_atual < self.__numero_paginas:
+            self.__pagina_atual += 1
 
     def retroceder_pagina (self):
-        if self.pagina_atual > 1:
-            self.pagina_atual -= 1
-            print(f'Você retrocedeu para a pagina: {self.pagina_atual}\n')
-
-print('_' * 50 + '\nAtividade 3. Livro\n' + '_' * 50)
+        if self.__pagina_atual > 1:
+            self.__pagina_atual -= 1

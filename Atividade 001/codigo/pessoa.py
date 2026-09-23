@@ -2,26 +2,44 @@ class Pessoa:
 
     def __init__(self):
 
-        self.nome = 'Marcos'
-        self.idade = 0
-        self.altura = 0.0
-        self.peso = 0.0
+        self.__nome = ''
+        self.__idade = 0
+        self.__altura = 0.0
+        self.__peso = 0.0
+
+        def get_nome(self):
+            return self.__nome
+
+        def set_nome(self, nome):
+            self.__nome = nome
+
+        def get_idade(self):
+            return self.__idade
+
+        def set_idade(self, idade):
+            self.__idade = idade
+
+        def get_altura(self):
+            return self.__altura
+
+        def set_altura(self, altura):
+            self.__altura = altura
+
+        def get_peso(self):
+            return self.__peso
+
+        def set_peso(self, peso):
+            self.__peso = peso
 
     def envelhecer (self):
-        self.idade += 1
-        print(f'{self.nome} tem {self.idade} anos.\n')
+        self.__idade += 1
 
     def crescer (self, centimetro):
-        if self.idade < 21:
-            self.altura += centimetro
-            print(f'{self.nome} cresceu {centimetro} cm.\n')
+        if self.__idade < 21:
+            self.__altura += centimetro
 
     def ganhar_peso (self , quilos):
-        self.peso += quilos
-        print (f'{self.nome} ganhou: {quilos} kg\n')
+        self.__peso += quilos
 
     def perder_peso (self, quilos_p):
-        self.peso -= quilos_p
-        print(f'{self.nome} perdeu: {quilos_p} kg\n')
-
-print('_' * 50 + '\nAtividade 4. Pessoa\n' + '_' * 50)
+        self.__peso -= quilos_p
